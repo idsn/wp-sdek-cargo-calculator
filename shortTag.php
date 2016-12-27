@@ -164,7 +164,7 @@
     }
 </script>
 
-<form class="jotform-form" style="margin-left: 20%">
+<form class="jotform-form">
     <input type="hidden" id="cityFromId">
     <style scoped>
         .hidden {
@@ -174,29 +174,13 @@
 
     <div class="form-all">
         <ul class="form-section page-section">
-            <li id="cid_18" class="form-input-wide" data-type="control_head">
-                <div class="form-header-group">
-                    <div class="header-text httal htvam">
-                        <h1 id="header_18" class="form-header">
-                            Рассчёт стоимости доставки
-                        </h1>
-                        <div id="subHeader_18" class="form-subHeader">
-                            Пожалуйста, укажите параметры вашего отправления и мы сможем рассчитать его стоимость.
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-
             <li class="form-line" id="id_cargoWeight">
-                <label class="form-label form-label-top form-label-auto" id="cargoParametersWeight"> Основные
-                    параметры </label>
 
                 <div class="form-input-wide jf-required">
                 <span class="form-sub-label-container" style="vertical-align: top;">
-            <input class="form-textbox" type="text" size="30" name="cityTo" id="cityTo" required="required">
-            <label class="form-sub-label" for="cityTo" id="sublabel_cityTo" style="min-height: 13px;">
-                Город, куда требуется выполнить доставку </label>
+              <label class="form-label form-label-top form-label-auto" id="sublabel_cityTo"> Город доставки </label>
+                    <input class="form-textbox" type="text" size="30" name="cityTo" id="cityTo" required="required">
+
           </span>
                 </div>
 
@@ -204,18 +188,17 @@
                 <div class="form-input-wide jf-required">
 
           <span class="form-sub-label-container" style="vertical-align: top;">
+            <label class="form-label form-label-top form-label-auto" id="sublabel_Weight"> Вес отправления (кг) </label>
             <input class="form-textbox" type="number" size="10" name="cargoWeight" id="cargoWeight" min="1" max="100" required="required">
-            <label class="form-sub-label" for="cargoWeight" id="sublabel_Weight" style="min-height: 13px;">
-                Вес, кг </label>
+
           </span>
 
 
                     <span class="form-sub-label-container" style="vertical-align: top;">
             <select class="form-dropdown" style="width:150px;" id="metricsVariants">
-                <option value="metrics"> Укажу метрики</option>
-                <option value="volume"> Укажу объём</option>
+                <option value="metrics"> Рассчет по метрике</option>
+                <option value="volume"> Рассчет по объёму</option>
             </select>
-            <label class="form-sub-label" for="metricsVariants" style="min-height: 13px;"> Объём или метрики? </label>
           </span>
                 </div>
             </li>
@@ -269,16 +252,17 @@
             </li>
 
             <li class="form-line hidden" id="id_calculationResult">
-                <label class="form-label form-label-top form-label-auto"> Результаты рассчёта</label>
 
-                <div class="form-input-wide">
-                    <Label class="form-label form-label-auto">Ожидаемые даты доставки: <em id="calculationResultDate"></em></Label>
-
+                   <div class="form-input-wide">
+                    <Label class="form-label form-label-auto">Стоимость доставки: <span id="calculationResultPrice"></span> руб.</Label>
                 </div>
 
                 <div class="form-input-wide">
-                    <Label class="form-label form-label-auto">Стоимость доставки: <em id="calculationResultPrice"></em> руб.</Label>
+                    <Label class="form-label form-label-auto">Ожидаемые даты доставки: <span id="calculationResultDate"></span></Label>
+
                 </div>
+
+
             </li>
 
             <li class="form-line hidden" id="id_calculationError">
