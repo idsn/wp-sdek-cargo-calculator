@@ -8,9 +8,9 @@
 ?>
 
 
-<link type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
+<link type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet"/>
 <!--<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>-->
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
 <script>
     var calculationType=0;
     $(document).ready(function () {
@@ -46,7 +46,7 @@
         $("#cityTo").autocomplete({
             source: function (request, response) {
                 $.ajax({
-                    url: 'http://api.cdek.ru/city/getListByTerm/jsonp.php?callback=?',
+                    url: '//api.cdek.ru/city/getListByTerm/jsonp.php?callback=?',
                     dataType: 'jsonp',
                     data: {
                         q: function () {
