@@ -1,5 +1,6 @@
 # wp-sdek-cargo-calculator
 Wordpress SDEK Cargo Price Calculator
+(Wordpress СДЭК Калькулятор)
 
 Калькулятор для СДЭК, который рассчитывает стоимость доставки груза.
 
